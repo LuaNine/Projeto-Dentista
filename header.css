@@ -1,0 +1,47 @@
+:root{
+    --corprimaria: #143083;
+    --corsecundaria: #2b499c;
+
+}
+
+header {
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    
+}
+
+.paginas{
+    color:rgb(8, 0, 0);
+    text-decoration: none;
+    margin-left: 15px; /* Espaçamento entre os links */
+}
+
+.paginas:hover{
+    font-size: 21px;
+    text-decoration: underline var(--corprimaria);
+    text-underline-offset: 10px;
+}
+.contato{
+    background:#608BC0;
+    border-radius: 20px;
+    color: rgb(255, 255, 255); 
+    font-size: 1rem;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    border: none; 
+}
+
+.contato:hover{
+    cursor: pointer;
+    background: #007BFF; /* Cor ao passar o mouse */
+    color: white; /* Ajuste a cor conforme necessário */
+    size: 21px;
+}
+
+.icones{
+    color: #608BC0;
+    font-size: 35px;
+}

@@ -1,0 +1,16 @@
+:root{
+    --corprimaria: #143083;
+    --corsecundaria: #2b499c;
+
+}
+footer{
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Ajuste a altura do footer conforme necessário */
+    background-color:#608bc06d;
+    color: rgb(12, 1, 1); /* Cor do texto no footer */
+    font-size: 20px; /* Tamanho da fonte no footer */
+    margin-top: 20vh; /* Espaçamento acima do footer */
+}
