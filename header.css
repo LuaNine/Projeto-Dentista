@@ -1,6 +1,7 @@
 :root{
     --corprimaria: #143083;
     --corsecundaria: #2b499c;
+    --cordetalhes: #608BC0 ;
 
 }
 
@@ -15,7 +16,7 @@ header {
 .paginas{
     color:rgb(8, 0, 0);
     text-decoration: none;
-    margin-left: 15px; /* Espaçamento entre os links */
+    margin-left: 15px; 
 }
 
 .paginas:hover{
@@ -24,7 +25,7 @@ header {
     text-underline-offset: 10px;
 }
 .contato{
-    background:#608BC0;
+    background:  #608BC0;
     border-radius: 20px;
     color: rgb(255, 255, 255); 
     font-size: 1rem;
@@ -36,12 +37,11 @@ header {
 
 .contato:hover{
     cursor: pointer;
-    background: #007BFF; /* Cor ao passar o mouse */
-    color: white; /* Ajuste a cor conforme necessário */
-    size: 21px;
+    background: var(--corprimaria); 
+    color: white;
 }
 
 .icones{
-    color: #608BC0;
+    color:  #608BC0;
     font-size: 35px;
 }

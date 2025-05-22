@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --corprimaria: #143083;
+  --corsecundaria: #2b499c;
+  --cordetalhes: #a8c6f169;
+  --fontetextos: "Nunito", sans-serif;
+  --fontetitulos: "Montserrat Alternates", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.paginaInicial {
+  padding-bottom: 10rem;
+  background: #ffffff;
+}
+#titulo {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+#logo {
+  margin-left: -80px;
+  width: 150px;
+  height: auto;
+}
+#titulo {
+  font-size: 4rem;
+  color: var(--corprimaria);
+  margin-top: 3rem;
+  margin-left: 11rem;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  gap: clamp(1rem, 5vw, 4rem);
+  justify-content: space-between;
+}
+
+.imagem {
+  padding: 1.5rem;
+}
+
+#fachada {
+  max-width: 90%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(7, 43, 80, 0.599);
+}
+
+#desc {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: black;
+  padding: 8px 0 0 20vh;
+}
+
+.botao-servicos {
+  background: var(--corsecundaria);
+  border-radius: 25px;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: 20vh;
+  margin-top: 8vh;
+}
+
+.link-servicos {
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+
+.botao-servicos:hover {
+  background: var(--corprimaria);
+}
+
+.icones:hover {
+  color: var(--corprimaria);
+  font-size: 41px;
+}
+
+.contatoBox {
+  margin-top: -500px;
+  margin-left: 960px;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cbxTitulo {
+  color: #153d84;
+}
+/*AGENDAMENTOS E FUNCIONAMENTO*/
+
+
+.horariosAgendamentos {
+  background: linear-gradient(135deg, #0f2c74, #1e3fa3, #4d619e);
+  padding-top: 5rem;
+  height: 80vh;
+}
+.containerDois {
+  display: flex;
+  justify-content: center;
+  font-family: var(--fontetextos);
+  gap: 4rem;
+  width: 100%;
+  padding: 2rem 1rem;
+  align-items: center;
+}
+
+.box1 {
+  padding: 40px;
+  background-color: #d9eaff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 2rem;
+  height: 100%;
+  max-width: 450px;
+}
+
+.box2 {
+  background-color: #d9eaff;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(68, 130, 255, 0.268);
+  display: flex;
+  flex: 0.5;
+  flex-direction: column;
+}
+
+
+
+.box1 h3 {
+  display: flex;
+  font-size: 2rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.box1 p {
+  font-size: 1.5rem;
+}
+
+
+.box2 h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.titulo-box{
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+  justify-content: center;
+}
+
+.titulo-box i {
+  font-size: 2rem;
+  color: var(--corprimaria); /* azul da sua paleta */
+}
+
+.agendar {
+  text-align: center;
+  background-color: var(--corsecundaria);
+  padding: 1rem;
+  border: none;
+  border-radius: 25px;
+  margin-top: 2rem;
+  cursor: pointer;
+  width: 90%;
+}
+
+.agendar:hover {
+  background-color: var(--corprimaria);
+}
+.linkagendar {
+  color: white;
+  font-size: 1.5rem;
+  font-family: var(--fontetextos);
+  text-decoration: none;
+}
+
+.divisor {
+  margin: 10px 0;
+  height: 1px;
+  background-color: #000000;
+  border: none;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.dias {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.horarios {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin: 0.5rem;
+}
+
+.horario {
+  background-color: #91c0fd3f;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+}
+
+/**ABA SOBRE NOS**/
+.sobreNos {
+  background: linear-gradient(135deg, #ccdcef, #f1f6ff);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.sobreNos h1 {
+  color: var(--corprimaria);
+  font-family: var(--fontetextos);
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.sobreNos h2 {
+  font-family: var(--fontetitulos);
+  color: var(--corprimaria);
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.conteudoSobre {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.textoSobre {
+  align-self: flex-start;
+  font-family: var(--fontetextos);
+  flex: 1;
+  max-width: 500px;
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.fotoSobre {
+  
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.fotoSobre img {
+box-shadow: 8px 8px rgba(20, 48, 131, 0.668)
+
+;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.fotoSobre h4 {
+  font-family: var(--fontetextos);
+  font-weight: bold;
+  color: var(--corprimaria);
+  font-size: 1.5rem;
+}
+
+.fotoSobre .cro {
+  font-family: var(--fontetextos);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+/**Nossa Localizacao?**/
+
+#localizacao{
+
+}
+
+ #localizacao h2{
+  text-align: center;
+  font-family: var(--fontetextos);
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1rem;
+    margin-bottom: 0.5rem;
+ }
+
+ #localizacao p{
+  color: var(--corprimaria);
+  font-family: var(--fontetextos);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+ }
+ 
+ #localizacao i{
+   color: #c09e3f; 
+  margin-right: 0.5rem;
+ }
