@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=calendar_month" />
+    <link rel="preload" href="Philosopher.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="assets/font/stylesheet.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/iconsite/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/iconsite/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/iconsite/favicon-16x16.png">
@@ -18,20 +20,11 @@
   <body>
     <header>
       <img id="logo" src="assets/BO-Simbolo.png" alt="logo" />
-      <a class="paginas" href="">Página Inicial</a>
-      <a class="paginas" href="">Sobre Nós</a>
-      <a class="paginas" href="">Serviços</a>
-      <a class="paginas" href="#localizacao">Localização</a>
+      <a class="paginas" href="#paginaInicial">Página Inicial</a>
+      <a class="paginas" href="#sobreNos">Sobre Nós</a>
+      <a class="paginas" href="#nossosServicos">Serviços</a>
+      <a class="paginas" href="#nossaLocalizacao">Localização</a>
       <button class="contato" id="contato">Contato</button>
-      <div class="contatoBox" id="contatoBox">
-        <div class="innerContatoBox">
-          <h2 id="cbxTitulo">Whatsapp:</h2>
-          <div class="zap">
-            <i class="bi bi-whatsapp"></i>
-            <p>+55 17 98207-9171</p>
-          </div>
-          <button id="fecharBox">Fechar</button>
-        </div>
       </div>
       <div class="redesSociais">
         <a href="https://www.facebook.com/ultradents/?locale=pt_BR"
@@ -44,13 +37,13 @@
     </header>
     <main>
       <section class="paginaInicial">
-      <div class="container">
-        <div>
+      <div class="containerGrid">
+        <div class="containerTexto">
           <h1 id="titulo">Busutti<br />Odontologia</h1>
           <p id="desc">
             Na Busutti Odontologia, devolvemos a confiança ao<br />seu sorriso
             com tecnologia, cuidado e soluções<br />duradouras em implantes e
-            tratamentos<br />personalizados
+            tratamentos<br />personalizados.
           </p>
           <div class="botao-servicos">
             <a href="" class="link-servicos">Veja nossos serviços</a>
@@ -108,7 +101,7 @@
           </div>
         </div>
       </section>
-      <section class="sobreNos">
+      <section id="sobreNos">
     <h1>SOBRE NÓS</h1>
     <h2>Busutti Odontologia</h2>
 
@@ -130,10 +123,18 @@
       </div>
     </div>
   </section>
-        <section id="localizacao">
-          <h2>Nossa <strong>Localização</strong></h2>
-            <p><i class="bi bi-geo-alt-fill"></i>Av. Fortunato Ernesto Vetorasso, 855  Jardim Res. Vetorasso, São José do Rio Preto - SP 15040-300</p>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.8690529577025!2d-49.415560188392014!3d-20.79658486579951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bdadaf04c779df%3A0xdc9466834f4b579f!2sBusutti%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1747703408692!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section id="nossaLocalizacao">
+                      <h2>Nossa <strong>Localização</strong></h2>
+          <div class="localizacao">
+                              <hr class="customLine">
+            <div class="endereco">
+                          <p><i class="bi bi-geo-alt-fill"></i>Av. Fortunato Ernesto Vetorasso, 855  Jardim Res. Vetorasso, São José do Rio Preto - SP 15040-300</p>
+            </div>
+              <div class="mapalocalizacao">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.8690529577025!2d-49.415560188392014!3d-20.79658486579951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bdadaf04c779df%3A0xdc9466834f4b579f!2sBusutti%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1747703408692!5m2!1spt-BR!2sbr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>
+          
       </section>
     </main>
     <footer>
