@@ -1,0 +1,60 @@
+ :root{
+  --escuroCorPrimaria: #0F172A;
+  --escuroCorSecundaria: #1E293B;
+  --escuroCorTexto: #E2E8F0;
+
+ }
+ 
+ .modo-escuro {
+      background-color: var(--escuroCorPrimaria);
+      color: var(--escuroCorTexto);
+       transition: background-color 0.3s, color 0.3s;
+    }
+
+
+body.modo-escuro .paginas {
+      color: var(--escuroCorTexto);
+    }
+
+body.modo-escuro #desc {
+      color: var(--escuroCorTexto);
+    }
+
+body.modo-escuro .paginaInicial {
+      background: var(--escuroCorPrimaria);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+body.modo-escuro .box1 {
+      background: var(--escuroCorSecundaria);
+      color: var(--escuroCorTexto);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+body.modo-escuro .box2 {
+      background: var(--escuroCorSecundaria);
+      color: var(--escuroCorTexto);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+body.modo-escuro .sobreNos {
+      background: var(--escuroCorPrimaria);
+      color: var(--escuroCorTexto);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+.modo-escuro .contato {
+      background-color: var(--corprimaria);
+      color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+.modo-escuro .contato:hover {
+      background-color: var(--corsecundaria);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+.modo-escuro .redesSociais {
+      color: var(--corprimaria);
+      transition: background-color 0.3s, color 0.3s;
+    }
