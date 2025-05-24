@@ -37,7 +37,7 @@ body.modo-escuro .box2 {
       transition: background-color 0.3s, color 0.3s;
     }
 
-body.modo-escuro .sobreNos {
+body.modo-escuro #sobreNos {
       background: var(--escuroCorPrimaria);
       color: var(--escuroCorTexto);
       transition: background-color 0.3s, color 0.3s;

@@ -12,6 +12,11 @@ header {
     justify-content: space-evenly; 
     
 }
+#logo {
+  margin-left: -80px;
+  width: 150px;
+  height: auto;
+}
 
 .paginas{
     color:rgb(8, 0, 0);
@@ -26,15 +31,17 @@ header {
     transition: 0.1s ease-in-out;
 }
 .contato{
+    border: none;
     background:  #608BC0;
     border-radius: 20px;
     color: rgb(255, 255, 255); 
     font-size: 1rem;
     width: 100px;
-    height: 40px;
+    height:35px;
     text-align: center;
-    border: none; 
 }
+
+
 
 .contato:hover{
     cursor: pointer;

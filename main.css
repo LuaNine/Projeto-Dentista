@@ -5,56 +5,46 @@
   --corsecundaria: #2b499c;
   --cordetalhes: #a8c6f169;
   --fontetextos: "Nunito", sans-serif;
-  --fontetitulos: "Montserrat Alternates", sans-serif;
+  --fontetitulos: "Philosopher", sans-serif;
 }
 body {
   margin: 0;
   padding: 0;
+
 }
 
 .paginaInicial {
-  padding-bottom: 10rem;
+  padding-bottom: 18rem;
   background: #ffffff;
 }
 #titulo {
-  font-family: "Montserrat Alternates", sans-serif;
-}
-
-#logo {
-  margin-left: -80px;
-  width: 150px;
-  height: auto;
-}
-#titulo {
-  font-size: 4rem;
+  margin-bottom: 0;
+    font-family: var(--fontetitulos);
+  font-weight: normal;
+  font-size: 5rem;
   color: var(--corprimaria);
   margin-top: 3rem;
-  margin-left: 11rem;
+}
+#desc {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  color: black;
 }
 
-.container {
-  align-items: center;
-  display: flex;
-  gap: clamp(1rem, 5vw, 4rem);
-  justify-content: space-between;
+.containerTexto {
+  display: grid;
+justify-content: center;
 }
-
-.imagem {
-  padding: 1.5rem;
+.containerGrid {
+  padding-top: 5rem;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
 }
 
 #fachada {
   max-width: 90%;
-  height: auto;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(7, 43, 80, 0.599);
-}
-
-#desc {
-  font-family: "Nunito", sans-serif;
-  font-size: 20px;
-  color: black;
-  padding: 8px 0 0 20vh;
+  border-radius: 3rem;
+  box-shadow: 0 0 20px rgba(7, 43, 80, 0.599);
 }
 
 .botao-servicos {
@@ -64,8 +54,7 @@ body {
   height: 50px;
   text-align: center;
   padding-top: 15px;
-  margin-left: 20vh;
-  margin-top: 8vh;
+  margin-top: 15px;
 }
 
 .link-servicos {
@@ -84,36 +73,16 @@ body {
   font-size: 41px;
 }
 
-.contatoBox {
-  margin-top: -500px;
-  margin-left: 960px;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: all 0.3s ease-in-out;
-  z-index: -1;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#cbxTitulo {
-  color: #153d84;
-}
 /*AGENDAMENTOS E FUNCIONAMENTO*/
 
-
 .horariosAgendamentos {
-  background: linear-gradient(135deg, #0f2c74, #1e3fa3, #4d619e);
+  background: linear-gradient(111deg, #1e3fa3e1, #4d619e);
   padding-top: 5rem;
   height: 80vh;
 }
 .containerDois {
   display: flex;
+  align-items: center;
   justify-content: center;
   font-family: var(--fontetextos);
   gap: 4rem;
@@ -128,7 +97,6 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 2rem;
   height: 100%;
-  max-width: 450px;
 }
 
 .box2 {
@@ -140,8 +108,6 @@ body {
   flex: 0.5;
   flex-direction: column;
 }
-
-
 
 .box1 h3 {
   display: flex;
@@ -155,16 +121,15 @@ body {
   font-size: 1.5rem;
 }
 
-
 .box2 h3 {
   font-size: 2rem;
   text-align: center;
 }
 
-.titulo-box{
+.titulo-box {
   display: flex;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -231,25 +196,26 @@ body {
   text-align: center;
 }
 
-/**ABA SOBRE NOS**/
-.sobreNos {
+/** SOBRE NOS**/
+#sobreNos {
   background: linear-gradient(135deg, #ccdcef, #f1f6ff);
   padding: 60px 20px;
   text-align: center;
 }
 
-.sobreNos h1 {
+#sobreNos h1 {
   color: var(--corprimaria);
-  font-family: var(--fontetextos);
+  font-family: var(--fontetitulos);
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
-.sobreNos h2 {
-  font-family: var(--fontetitulos);
-  color: var(--corprimaria);
-  font-weight: 500;
+#sobreNos h2 {
+  font-family: var(--fontetextos);
+  color: var(--corsecundaria);
+  font-weight: normal;
+  font-style: italic;
   font-size: 2rem;
   margin-bottom: 40px;
 }
@@ -277,16 +243,13 @@ body {
 }
 
 .fotoSobre {
-  
   flex: 1;
   max-width: 500px;
   text-align: center;
 }
 
 .fotoSobre img {
-box-shadow: 8px 8px rgba(20, 48, 131, 0.668)
-
-;
+  box-shadow: 8px 8px rgba(20, 48, 131, 0.668);
   width: 100%;
   border-radius: 15px;
 }
@@ -304,33 +267,46 @@ box-shadow: 8px 8px rgba(20, 48, 131, 0.668)
   font-weight: bold;
 }
 
+/**Nossa Localizacao**/
 
-/**Nossa Localizacao?**/
 
-#localizacao{
+#nossaLocalizacao{
+    padding: 2rem 2rem;
 
 }
 
- #localizacao h2{
-  text-align: center;
-  font-family: var(--fontetextos);
-  font-size: 2rem;
-  font-weight: 300;
-  padding: 1rem;
-    margin-bottom: 0.5rem;
- }
+.localizacao{
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto ;
+  align-items: start;}
 
- #localizacao p{
+#nossaLocalizacao h2 {
+  text-align: center;
+  font-family: var(--fontetitulos);
+  color: var(--corprimaria);
+  font-size: 3rem;
+  font-weight: normal;
+}
+.customLine{
+border: none;
+border-top: 2px solid #c6a5378b;
+ width: 100%;
+  max-width: 100%;
+}
+.endereco  {
+  align-items: start;
   color: var(--corprimaria);
   font-family: var(--fontetextos);
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
   padding: 1rem;
   margin-bottom: 1rem;
- }
- 
- #localizacao i{
-   color: #c09e3f; 
+}
+
+.endereco i {
+  color: #c09e3f;
   margin-right: 0.5rem;
  }
+
 
