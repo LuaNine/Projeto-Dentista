@@ -28,6 +28,7 @@ header {
     font-size: 21px;
     text-decoration: underline var(--corprimaria);
     text-underline-offset: 10px;
+    transition: 0.1s ease-in-out;
 }
 .contato{
     border: none;
@@ -51,4 +52,12 @@ header {
 .icones{
     color:  #608BC0;
     font-size: 35px;
+}
+
+.btnModoEscuro{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
 }
