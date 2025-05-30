@@ -11,7 +11,6 @@
        transition: background-color 0.3s, color 0.3s;
     }
 
-
 body.modo-escuro .paginas {
       color: var(--escuroCorTexto);
     }
@@ -20,10 +19,15 @@ body.modo-escuro #desc {
       color: var(--escuroCorTexto);
     }
 
-body.modo-escuro .paginaInicial {
+body.modo-escuro #paginaInicial {
       background: var(--escuroCorPrimaria);
       transition: background-color 0.3s, color 0.3s;
     }
+
+body.modo-escuro .containerGrid{
+        background: var(--escuroCorPrimaria);
+      transition: background-color 0.3s, color 0.3s;
+}
 
 body.modo-escuro .box1 {
       background: var(--escuroCorSecundaria);
@@ -58,3 +62,15 @@ body.modo-escuro #sobreNos {
       color: var(--corprimaria);
       transition: background-color 0.3s, color 0.3s;
     }
+
+    .modo-escuro .item{
+      box-shadow: 5px 5px 10px var(--corprimaria) ;
+      background-color: var(--escuroCorTexto);
+    }
+.modo-escuro #nossaLocalizacao{
+  background-color: var(--escuroCorPrimaria);
+}
+
+.modo-escuro footer{
+  background: var(--escuroCorSecundaria);
+}
