@@ -7,29 +7,33 @@
   --fontetextos: "Nunito", sans-serif;
   --fontetitulos: "Philosopher", sans-serif;
 }
+
+
 body {
   margin: 0;
   padding: 0;
-
+   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.paginaInicial {
-  padding-bottom: 18rem;
+#paginaInicial {
+    height: 83vh;
+  padding-bottom: 1rem;
   background: #ffffff;
 }
 #titulo {
   margin-bottom: 0;
-    font-family: var(--fontetitulos);
+  font-family: var(--fontetitulos);
   font-weight: normal;
   font-size: 5rem;
   color: var(--corprimaria);
   margin-top: 3rem;
 }
 #desc {
+  padding: 10px;
   font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
   color: black;
@@ -37,7 +41,7 @@ html {
 
 .containerTexto {
   display: grid;
-justify-content: center;
+  justify-content: center;
 }
 .containerGrid {
   padding-top: 5rem;
@@ -48,7 +52,7 @@ justify-content: center;
 #fachada {
   max-width: 90%;
   border-radius: 3rem;
-  box-shadow: 0 0 20px rgba(7, 43, 80, 0.599);
+  box-shadow: 0 0 20px rgba(7, 44, 80, 0.726);
 }
 
 .botao-servicos {
@@ -81,8 +85,7 @@ justify-content: center;
 
 .horariosAgendamentos {
   background: linear-gradient(111deg, #1e3fa3e1, #4d619e);
-  padding-top: 5rem;
-  height: 80vh;
+  min-height: 50vh;
 }
 .containerDois {
   display: flex;
@@ -273,91 +276,110 @@ justify-content: center;
 
 /**Nossos Servicos**/
 
-#nossosServicos h2{
-text-align: center;
-font-family: var(--fontetitulos);
-font-size: 3rem;
-color: var(--corprimaria);
-background-color:#F7F7F7;
-margin-bottom: 30px;
-}
-.containerServicos p{
- color: black;
- font-family: var(--fontetextos);
- font-weight: bold;
- font-size: 1.5rem;
- align-items: center;
- margin-left: 100px;
- 
-}
-.containerServicos p:hover{
-  color: var(--corsecundaria)
+#nossosServicos {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
 }
 
+#nossosServicos h1 {
+  text-align: center;
+  font-family: var(--fontetitulos);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--corprimaria);
+}
 
 .containerServicos {
-  background-color: #F7F7F7;
   display: grid;
-  min-height: 90vh;
-  align-items: center;
-  grid-template-columns: repeat( 3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 0;
-  margin: 0;
-  padding: 0;
-  height: auto;;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 60px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
 }
 
-.nossosServicos div {
+.item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #F7F7F7 ;}
-
-
-#proteses {
-  grid-column: 1; grid-row: 1;}
-#canais {
-  grid-column: 2; grid-row: 1;}
-#clareamento{
-  grid-column: 3; grid-row: 1;}
-#exodontia {
-  grid-column: 1; grid-row: 2;}
-#aparelhos {
-  grid-column: 2; grid-row: 2;
-  margin-right: 150px;
-  text-align: center;}
-#implantes {
-  grid-column: 3; grid-row: 2;}
-#exodontia p{
-  margin-left: 5.5em;}
-#implantes p{
-  margin-left: 6em;}
-#clareamento img{
-  text-align: center;}
+}
+.containerServicos p {
+  color: black;
+  font-family: var(--fontetextos);
+  font-weight: bold;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.containerServicos p:hover {
+  cursor: pointer;
+  color: var(--corprimaria);
+}
 
 .containerServicos img {
-  height: 95px;
-  width: auto;
-  margin-bottom: 10px;
-  margin-left: 150px;
-  display: grid;
-  align-items: center;
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.containerServicos .item {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.containerServicos .item::before,
+.containerServicos .item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: all 0.8s ease;
+  pointer-events: none;
 }
 
+/* ::before no canto inferior esquerdo */
+.containerServicos .item::before {
+  bottom: 0;
+  left: 0;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
 
+/* ::after no canto superior direito */
+.containerServicos .item::after {
+  top: 0;
+  right: 0;
+  border-top: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+/* Animação ao passar o mouse */
+.containerServicos .item:hover::before,
+.containerServicos .item:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: var(--corprimaria);
+}
 
 /**Nossa Localizacao**/
 
-
-#nossaLocalizacao{
-    padding: 2rem 2rem;
-
+#nossaLocalizacao {
+  padding: 2rem 2rem;
+  background-color: var(--cordetalhes);
 }
 
-.localizacao{
+.localizacao {
   gap: 2rem;
   max-width: 1200px;
-  margin: 0 auto ;
-  align-items: start;}
+  margin: 0 auto;
+  align-items: start;
+}
 
 #nossaLocalizacao h2 {
   text-align: center;
@@ -366,13 +388,13 @@ margin-bottom: 30px;
   font-size: 3rem;
   font-weight: normal;
 }
-.customLine{
-border: none;
-border-top: 2px solid #c6a5378b;
- width: 100%;
+.customLine {
+  border: none;
+  border-top: 2px solid #c6a5378b;
+  width: 100%;
   max-width: 100%;
 }
-.endereco  {
+.endereco {
   align-items: start;
   color: var(--corprimaria);
   font-family: var(--fontetextos);
@@ -385,6 +407,4 @@ border-top: 2px solid #c6a5378b;
 .endereco i {
   color: #c09e3f;
   margin-right: 0.5rem;
- }
-
-
+}

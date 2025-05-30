@@ -1,16 +1,55 @@
 :root{
     --corprimaria: #143083;
     --corsecundaria: #2b499c;
+      --cordetalhes: #a8c6f169;
+
+    --fontetextos: "Nunito", sans-serif;
 
 }
+
+
+
 footer{
-    font-family: "Nunito", sans-serif;
+font-family: var(--fontetextos);
+background-color: #adc5e9;
+height: 29vh;
+}
+
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.container{
+    font-size: 1rem;
+}
+.ender{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; 
-    background-color:#608bc06d;
-    color: rgb(12, 1, 1); 
-    font-size: 20px; 
-    margin-top: 20vh;
+}
+.ender p{
+    font-size: 17px;
+      line-height: 1.8;
+
+}
+.cont{
+    padding-top: 15px;
+    text-align: center;
+}
+.info{
+                padding-top: 15px;
+    text-align: center;
+}
+
+.copy{
+    font-style: italic;
+    padding-top: 3px;
+    text-align: center;
+}
+
+.divisorCopy{
+      border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.94);
+
 }
