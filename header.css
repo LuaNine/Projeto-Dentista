@@ -5,55 +5,40 @@
 
 }
 
-header {
-    font-family: "Nunito", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly; 
-    
-}
-#logo {
-  margin-left: -80px;
-  width: 150px;
-  height: auto;
-}
-
-.paginas{
-    color:rgb(8, 0, 0);
-    text-decoration: none;
-    margin-left: 15px; 
-}
-
-.paginas:hover{
-    font-size: 21px;
-    text-decoration: underline var(--corprimaria);
-    text-underline-offset: 10px;
-    transition: 0.1s ease-in-out;
-}
-.contato{
-    border: none;
-    background:  #608BC0;
-    border-radius: 20px;
-    color: rgb(255, 255, 255); 
-    font-size: 1rem;
-    width: 100px;
-    height:35px;
-    text-align: center;
-}
-
-
-
-.contato:hover{
-    cursor: pointer;
-    background: var(--corprimaria); 
+nav {
+    font-family: "Nunito", sans-serif; 
+    height: 120px;
     color: white;
+
 }
 
+
+.nav-item{
+    font-size: 1rem;
+    padding: 25px;
+    margin-left: 20px;
+    margin-right: 90px;
+}
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: var(--corprimaria);
+}
+
+.nav-link:active {
+  transform: scale(0.97);
+}
 .icones{
-    color:  #608BC0;
-    font-size: 35px;
+    
+    padding-left: 20px;
+    color:  var(--corsecundaria);
+    font-size: 1.5rem;
 }
 
+.icones:hover{
+    color: var(--corprimaria);
+}
 .btnModoEscuro{
     position: absolute;
     top: 20px;

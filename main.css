@@ -8,11 +8,10 @@
   --fontetitulos: "Philosopher", sans-serif;
 }
 
-
 body {
   margin: 0;
   padding: 0;
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 html {
@@ -20,7 +19,9 @@ html {
 }
 
 #paginaInicial {
-    height: 800px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
   padding-bottom: 1rem;
   background: #ffffff;
 }
@@ -33,7 +34,7 @@ html {
   margin-top: 3rem;
 }
 #desc {
-  padding: 10px;
+  margin: 50px 30px 50px 0;
   font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
   color: black;
@@ -59,43 +60,39 @@ html {
   background: var(--corsecundaria);
   border-radius: 25px;
   width: 300px;
-  height: 50px;
+  height: auto;
+  padding: 10px;
   text-align: center;
-  padding-top: 15px;
-  margin-top: 15px;
 }
 
 .link-servicos {
   font-family: "Nunito", sans-serif;
   text-decoration: none;
   color: white;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .botao-servicos:hover {
   background: var(--corprimaria);
 }
 
-.icones:hover {
-  color: var(--corprimaria);
-  font-size: 41px;
-}
-
 /*AGENDAMENTOS E FUNCIONAMENTO*/
 
-.horariosAgendamentos {
+#horariosAgendamentos {
+  scroll-margin-top: 102px;
   background: linear-gradient(111deg, #1e3fa3e1, #4d619e);
-  min-height: 50vh;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .containerDois {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--fontetextos);
   gap: 4rem;
   width: 100%;
-  padding: 2rem 1rem;
-  align-items: center;
+  max-width: 1200px;
 }
 
 .box1 {
@@ -104,6 +101,7 @@ html {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   border-radius: 2rem;
   height: 100%;
+  flex: 1;
 }
 
 .box2 {
@@ -112,7 +110,7 @@ html {
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(68, 130, 255, 0.268);
   display: flex;
-  flex: 0.5;
+  flex: 1;
   flex-direction: column;
 }
 
@@ -125,7 +123,8 @@ html {
 }
 
 .box1 p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  padding-top: 10px;
 }
 
 .box2 h3 {
@@ -142,7 +141,7 @@ html {
 
 .titulo-box i {
   font-size: 2rem;
-  color: var(--corprimaria); /* azul da sua paleta */
+  color: var(--corprimaria);
 }
 
 .agendar {
@@ -151,7 +150,7 @@ html {
   padding: 1rem;
   border: none;
   border-radius: 25px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   cursor: pointer;
   width: 90%;
 }
@@ -205,9 +204,10 @@ html {
 
 /** SOBRE NOS**/
 #sobreNos {
+  scroll-margin-top: 120px;
   background: linear-gradient(135deg, #ccdcef, #f1f6ff);
-  padding: 60px 20px;
   text-align: center;
+  height: 100vh;
 }
 
 #sobreNos h1 {
@@ -215,6 +215,7 @@ html {
   font-family: var(--fontetitulos);
   font-weight: 300;
   font-size: 3rem;
+  padding-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -251,17 +252,17 @@ html {
 
 .fotoSobre {
   flex: 1;
-  max-width: 500px;
-  text-align: center;
+  align-items: center;
 }
-
 .fotoSobre img {
   box-shadow: 8px 8px rgba(20, 48, 131, 0.668);
   width: 100%;
   border-radius: 15px;
+
 }
 
 .fotoSobre h4 {
+  padding-top: 20px;
   font-family: var(--fontetextos);
   font-weight: bold;
   color: var(--corprimaria);
@@ -269,14 +270,17 @@ html {
 }
 
 .fotoSobre .cro {
+  color: black;
   font-family: var(--fontetextos);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
+
 
 /**Nossos Servicos**/
 
 #nossosServicos {
+  scroll-margin-top: 120px;
   display: grid;
   grid-template-rows: auto 1fr;
   justify-content: center;
@@ -285,6 +289,7 @@ html {
 }
 
 #nossosServicos h1 {
+  padding-top: 30px;
   text-align: center;
   font-family: var(--fontetitulos);
   font-weight: bold;
@@ -370,6 +375,8 @@ html {
 /**Nossa Localizacao**/
 
 #nossaLocalizacao {
+  height: 90vh;
+  scroll-margin-top: 120px;
   padding: 2rem 2rem;
   background-color: var(--cordetalhes);
 }
