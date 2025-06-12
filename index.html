@@ -22,45 +22,49 @@
   </head>
   <body>
     <header>
-     <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand " href="#">
-          <img src="assets/BO-Simbolo.png" alt="Icone Busutti Odontologia"class= "ms-4" width="150px" height="auto">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav ">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#paginaInicial">Pagina Inicial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sobreNos">Sobre Nós</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#nossosServicos">Nossos serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#horariosAgendamentos">Agendamentos</a>
-            </li>
-              <li class="nav-item">
-              <a class="nav-link" href="#nossaLocalizacao">Localização</a>
-            </li>
-              <div class="nav-item">
-        <a href="https://www.facebook.com/ultradents/?locale=pt_BR"
-          ><i class="icones bi bi-facebook"></i
-        ></a>
-        <a href="https://www.instagram.com/busutti_odontologia/"
-          ><i class="icones bi bi-instagram"></i
-        ></a>
-          </div>
-          </ul>
-        </div>
-      </div>
-            <div class="btnModoEscuro"><input class="paginas" type="checkbox" onclick="ativarModoEscuro()" />Modo Escuro</div>
-
-    </nav>
+   <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#paginaInicial">
+      <img src="assets/BO-Simbolo.png" alt="Icone Busutti Odontologia" class="ms-4" width="120px">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#paginaInicial">Página Inicial</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sobreNos">Sobre Nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nossosServicos">Nossos serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#horariosAgendamentos">Agendamentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nossaLocalizacao">Localização</a>
+        </li>
+        <li class="nav-item d-flex justify-content-center gap-4">
+          <a href="https://www.facebook.com/ultradents/?locale=pt_BR" target="_blank">
+            <i class="icones bi bi-facebook fs-8"></i>
+          </a>
+          <a href="https://www.instagram.com/busutti_odontologia/" target="_blank">
+            <i class="icones bi bi-instagram fs-8"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <button class="btn-personalizado ms-2" id="modo-escuro-btn" onclick="ativarModoEscuro()">
+            Modo Escuro
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     </header>
     <main>
       <section id="paginaInicial">
@@ -73,7 +77,7 @@
             tratamentos<br />personalizados.
           </p>
           <div class="botao-servicos">
-            <a href="" class="link-servicos">Veja nossos serviços</a>
+            <a href="#nossosServicos" class="link-servicos">Veja nossos serviços</a>
           </div>
         </div>
         <div class="imagem">
@@ -92,7 +96,7 @@
                <br>Agende agora e venha sorrir com a gente!</p>
             </p>
             <div class="agendar">
-              <a class="linkagendar" href="#">Agendar Consulta</a>
+              <a class="linkagendar" href="https://wa.me/5517982079171?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank" rel="noopener noreferrer">Agendar Consulta</a>
             </div>
           </div>
           <div class="box2">
@@ -128,10 +132,10 @@
           </div>
         </div>
       </section>
-      <section id="sobreNos">
+     <section id="sobreNos">
+  <div class="containerSobreNos">
     <h1>SOBRE NÓS</h1>
     <h2>Busutti Odontologia</h2>
-
     <div class="conteudoSobre">
       <div class="textoSobre">
         <p>
@@ -142,15 +146,14 @@
           perfeito.
         </p>
       </div>
-
       <div class="fotoSobre">
         <img src="assets/pamelabusutti.jpg" alt="Dra. Pamela Katiene Busutti">
         <h4>Dra. Pamela Katiene Busutti</h4>
-                  <p class="cro">CRO-SP 105.238</p>
+        <p class="cro">CRO-SP 105.238</p>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   <section id="nossosServicos">
     <h1>Nossos Serviços</h1>
     <div class="containerServicos">
@@ -187,7 +190,7 @@
                           <p><i class="bi bi-geo-alt-fill"></i>Av. Fortunato Ernesto Vetorasso, 855  Jardim Res. Vetorasso, São José do Rio Preto - SP 15040-300</p>
             </div>
               <div class="mapalocalizacao">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.8690529577025!2d-49.415560188392014!3d-20.79658486579951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bdadaf04c779df%3A0xdc9466834f4b579f!2sBusutti%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1747703408692!5m2!1spt-BR!2sbr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.8690529577025!2d-49.415560188392014!3d-20.79658486579951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bdadaf04c779df%3A0xdc9466834f4b579f!2sBusutti%20Odontologia!5e0!3m2!1spt-BR!2sbr!4v1747703408692!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
           </div>
       </section>
@@ -195,11 +198,8 @@
    <footer>
   <div class="container">
             <div class="ender">
-        <img src="assets/BO-Simbolo.png" alt="Logo" style="width: 180px; height: auto; margin-right: 100px;">
-          <p>Av. Fortunato Ernesto Vetorasso, 855 - Jardim Res. <br>
-         Vetorasso, São José do Rio Preto - SP</p>
+        <img src="assets/BO-Simbolo.png" alt="Logo" style="width: 180px; height: auto;">
         </div>
-
       <div class="cont">
         <h4>Contato</h4>
         <p>(17) 98207-9171</p>
@@ -216,5 +216,6 @@
   </div>
 </footer>
     <script src="modoescuro.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

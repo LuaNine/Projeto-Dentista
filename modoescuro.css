@@ -11,14 +11,51 @@
        transition: background-color 0.3s, color 0.3s;
     }
 
-body.modo-escuro .paginas {
+body.modo-escuro #ModoEscuro {
       color: var(--escuroCorTexto);
     }
+.modo-escuro #titulo{
+  color: var(--escuroCorTexto);
+}
+.modo-escuro #sobreNos h1{
+  color: var(--escuroCorTexto);
+}
+.modo-escuro #sobreNos h2{
+  color: var(--escuroCorTexto);
+}
+.modo-escuro #sobreNos h4{
+  color: var(--escuroCorTexto);
+}
 
+.modo-escuro #sobreNos p{
+  color: var(--escuroCorTexto);
+}
+body.modo-escuro .navbar img{
+    filter: brightness(0) invert(1);
+
+}
+.modo-escuro #nossosServicos h1{
+  color: var(--escuroCorTexto);
+}
 body.modo-escuro #desc {
       color: var(--escuroCorTexto);
     }
 
+body.modo-escuro .navbar{
+  background-color: var(--escuroCorSecundaria) !important;
+}
+body.modo-escuro .nav-link{
+  color: var(--escuroCorTexto) !important;
+}
+body.modo-escuro .nav-link:hover{
+  color: #a8c6f169 !important;
+}
+body.modo-escuro .nav-item i{
+  color: var(--escuroCorTexto);
+}
+body.modo-escuro .nav-item i:hover{
+  color: #a8c6f169;
+}
 body.modo-escuro #paginaInicial {
       background: var(--escuroCorPrimaria);
       transition: background-color 0.3s, color 0.3s;
@@ -27,6 +64,13 @@ body.modo-escuro #paginaInicial {
 body.modo-escuro .containerGrid{
         background: var(--escuroCorPrimaria);
       transition: background-color 0.3s, color 0.3s;
+}
+
+body.modo-escuro #horariosAgendamentos{
+  background-color: var(--escuroCorPrimaria);
+}
+body.modo-escuro #horariosAgendamentos i{
+  color: rgb(103, 127, 183);
 }
 
 body.modo-escuro .box1 {
@@ -70,7 +114,16 @@ body.modo-escuro #sobreNos {
 .modo-escuro #nossaLocalizacao{
   background-color: var(--escuroCorPrimaria);
 }
-
+.modo-escuro #nossaLocalizacao h2{
+  color: var(--escuroCorTexto);
+}
+.modo-escuro #nossaLocalizacao p{
+  color: var(--escuroCorTexto);
+}
 .modo-escuro footer{
   background: var(--escuroCorSecundaria);
+}
+.modo-escuro footer img{
+    filter: brightness(0) invert(1);
+
 }

@@ -17,7 +17,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+html, body{
+    max-width: 100%;
+  overflow-x: hidden;
+}
 #paginaInicial {
   display: flex;
   align-items: center;
@@ -73,7 +76,97 @@ html {
 }
 
 .botao-servicos:hover {
+  cursor: pointer;
   background: var(--corprimaria);
+}
+
+/* Ajustes para telas maiores que 1920px (ex: TVs grandes) */
+@media (min-width: 1921px) {
+  #titulo {
+    font-size: 6rem;
+  }
+  #desc {
+    font-size: 1.8rem;
+  }
+  .botao-servicos {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #paginaInicial {
+   padding-top:  120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+  }
+
+  .containerGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .containerTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #titulo {
+    font-size: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #desc {
+    font-size: 1.3rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  #fachada {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .botao-servicos {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+}
+
+/* Celulares e dispositivos pequenos (até 767px) */
+@media (max-width: 767px) {
+  #paginaInicial{
+    padding-top: 120px;
+  }
+  .containerGrid {
+    grid-template-columns: 1fr; 
+    padding-top: 2rem;
+
+  }
+  #titulo {
+    font-size: 2.5rem;
+  }
+  #desc {
+    font-size: 1.1rem;
+    margin: 20px 0 30px 0;
+  }
+  #fachada {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 2rem;
+  }
+  .botao-servicos {
+    width: 90%;
+    max-width: 300px;
+  }
 }
 
 /*AGENDAMENTOS E FUNCIONAMENTO*/
@@ -115,6 +208,7 @@ html {
 }
 
 .box1 h3 {
+  font-family: var(--fontetitulos);
   display: flex;
   font-size: 2rem;
   flex-direction: column;
@@ -123,11 +217,12 @@ html {
 }
 
 .box1 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding-top: 10px;
 }
 
 .box2 h3 {
+    font-family: var(--fontetitulos);
   font-size: 2rem;
   text-align: center;
 }
@@ -160,8 +255,8 @@ html {
 }
 .linkagendar {
   color: white;
-  font-size: 1.5rem;
-  font-family: var(--fontetextos);
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
   text-decoration: none;
 }
 
@@ -180,7 +275,7 @@ html {
 }
 .dias {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 0.5rem;
 }
 
@@ -202,21 +297,85 @@ html {
   text-align: center;
 }
 
+
+@media (max-width: 1024px) {
+  .containerDois {
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #horariosAgendamentos {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .containerDois {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .box1, .box2 {
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .box1 h3,
+  .box1 p,
+  .box2 h3,
+  .dias,
+  .horario,
+  .linha {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .linha {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .horarios {
+    align-items: center;
+    margin: 0;
+  }
+
+  .agendar {
+    width: 100%;
+  }
+}
+
+
 /** SOBRE NOS**/
 #sobreNos {
   scroll-margin-top: 120px;
   background: linear-gradient(135deg, #ccdcef, #f1f6ff);
-  text-align: center;
-  height: 100vh;
+  min-height: 90vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerSobreNos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
 }
 
 #sobreNos h1 {
   color: var(--corprimaria);
   font-family: var(--fontetitulos);
-  font-weight: 300;
+  font-weight: bold;
   font-size: 3rem;
-  padding-top: 30px;
-  margin-bottom: 10px;
+  padding-bottom: 8px;
+  text-align: left;
 }
 
 #sobreNos h2 {
@@ -225,26 +384,22 @@ html {
   font-weight: normal;
   font-style: italic;
   font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-.conteudoSobre {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 ;
   text-align: left;
 }
 
+#sobreNos .conteudoSobre {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .textoSobre {
-  align-self: flex-start;
-  font-family: var(--fontetextos);
   flex: 1;
-  max-width: 500px;
+  font-family: var(--fontetextos);
+  max-width: 600px;
   font-size: 1.5rem;
   text-align: justify;
   line-height: 1.8;
@@ -252,17 +407,20 @@ html {
 
 .fotoSobre {
   flex: 1;
-  align-items: center;
+  max-width: 500px;
+  text-align: center;
+    padding-bottom: 20px;
+
 }
+
 .fotoSobre img {
   box-shadow: 8px 8px rgba(20, 48, 131, 0.668);
   width: 100%;
-  border-radius: 15px;
-
+  border-radius: 20px;
 }
 
 .fotoSobre h4 {
-  padding-top: 20px;
+  margin-top: 20px;
   font-family: var(--fontetextos);
   font-weight: bold;
   color: var(--corprimaria);
@@ -276,6 +434,145 @@ html {
   font-weight: bold;
 }
 
+#sobreNos {
+  scroll-margin-top: 120px;
+  background: linear-gradient(135deg, #ccdcef, #f1f6ff);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.containerSobreNos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+}
+
+#sobreNos h1 {
+  color: var(--corprimaria);
+  font-family: var(--fontetitulos);
+  font-weight: bold;
+  font-size: 3rem;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+#sobreNos h2 {
+  font-family: var(--fontetextos);
+  color: var(--corsecundaria);
+  font-weight: normal;
+  font-style: italic;
+  font-size: 2rem;
+  margin: 0;
+  text-align: left;
+}
+
+#sobreNos .conteudoSobre {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.textoSobre {
+  flex: 1;
+  font-family: var(--fontetextos);
+  max-width: 600px;
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.fotoSobre {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.fotoSobre img {
+  box-shadow: 8px 8px rgba(20, 48, 131, 0.668);
+  width: 100%;
+  border-radius: 20px;
+}
+
+.fotoSobre h4 {
+  margin-top: 20px;
+  font-family: var(--fontetextos);
+  font-weight: bold;
+  color: var(--corprimaria);
+  font-size: 1.5rem;
+}
+
+.fotoSobre .cro {
+  color: black;
+  font-family: var(--fontetextos);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ----------------------------- */
+/* RESPONSIVIDADE */
+/* ----------------------------- */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  #sobreNos h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  #sobreNos h2 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .conteudoSobre {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .textoSobre {
+    font-size: 1.4rem;
+    max-width: 90%;
+  }
+
+  .fotoSobre {
+    max-width: 90%;
+  }
+}
+
+/* Celulares (até 767px) */
+@media (max-width: 767px) {
+  #sobreNos h1 {
+    font-size: 2rem;
+  }
+
+  #sobreNos h2 {
+    font-size: 1.4rem;
+  }
+
+  .textoSobre {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .fotoSobre h4 {
+    font-size: 1.3rem;
+  }
+
+  .fotoSobre .cro {
+    font-size: 0.9rem;
+  }
+}
 
 /**Nossos Servicos**/
 
@@ -372,10 +669,147 @@ html {
   border-color: var(--corprimaria);
 }
 
+#nossosServicos {
+  scroll-margin-top: 120px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 0 20px; /* Adiciona margem lateral para evitar quebra de layout em telas pequenas */
+}
+
+#nossosServicos h1 {
+  padding-top: 30px;
+  text-align: center;
+  font-family: var(--fontetitulos);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--corprimaria);
+}
+
+.containerServicos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 60px;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerServicos p {
+  color: black;
+  font-family: var(--fontetextos);
+  font-weight: bold;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.containerServicos p:hover {
+  cursor: pointer;
+  color: var(--corprimaria);
+}
+
+.containerServicos img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.containerServicos .item {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.containerServicos .item::before,
+.containerServicos .item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: all 0.8s ease;
+  pointer-events: none;
+}
+
+.containerServicos .item::before {
+  bottom: 0;
+  left: 0;
+  border-left: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+.containerServicos .item::after {
+  top: 0;
+  right: 0;
+  border-top: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+
+.containerServicos .item:hover::before,
+.containerServicos .item:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: var(--corprimaria);
+}
+
+/* ----------------------------- */
+/* RESPONSIVIDADE */
+/* ----------------------------- */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .containerServicos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 40px;
+  }
+
+  #nossosServicos h1 {
+    font-size: 2.5rem;
+  }
+
+  .containerServicos p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+  .containerServicos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  #nossosServicos h1 {
+    font-size: 2rem;
+  }
+
+  .containerServicos p {
+    font-size: 1.2rem;
+  }
+
+  .containerServicos img {
+    width: 80px;
+  }
+}
+
 /**Nossa Localizacao**/
 
 #nossaLocalizacao {
-  height: 90vh;
+  height: 80vh;
   scroll-margin-top: 120px;
   padding: 2rem 2rem;
   background-color: var(--cordetalhes);
@@ -392,7 +826,7 @@ html {
   text-align: center;
   font-family: var(--fontetitulos);
   color: var(--corprimaria);
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: normal;
 }
 .customLine {
@@ -401,6 +835,7 @@ html {
   width: 100%;
   max-width: 100%;
 }
+
 .endereco {
   align-items: start;
   color: var(--corprimaria);
