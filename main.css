@@ -850,3 +850,6 @@ html, body{
   color: #c09e3f;
   margin-right: 0.5rem;
 }
+iframe{
+  border-radius: 15px;
+}

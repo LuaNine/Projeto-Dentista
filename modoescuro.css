@@ -56,6 +56,11 @@ body.modo-escuro .nav-item i{
 body.modo-escuro .nav-item i:hover{
   color: #a8c6f169;
 }
+
+body.modo-escuro #navbarNav {
+background-color: var(--escuroCorSecundaria);
+}
+
 body.modo-escuro #paginaInicial {
       background: var(--escuroCorPrimaria);
       transition: background-color 0.3s, color 0.3s;
