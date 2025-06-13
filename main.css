@@ -54,7 +54,7 @@ html, body{
 }
 
 #fachada {
-  max-width: 90%;
+  max-width: 80%;
   border-radius: 3rem;
   box-shadow: 0 0 20px rgba(7, 44, 80, 0.726);
 }
